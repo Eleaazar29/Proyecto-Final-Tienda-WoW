@@ -1,0 +1,131 @@
+/* ======================================= */
+/* TABLAS ORDENABLES (PANEL ADMIN)         */
+/* ======================================= */
+th.sortable { 
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+    position: relative; 
+    user-select: none; 
+}
+
+th.sortable:hover { 
+    color: var(--color-primario); 
+}
+
+th.sortable::after { 
+    content: '\f0dc'; 
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    margin-left: 8px; 
+    opacity: 0.3; 
+    transition: all 0.3s ease; 
+}
+
+th.sortable:hover::after { 
+    opacity: 0.8; 
+}
+
+th.sortable.asc::after { 
+    content: '\f0de'; 
+    opacity: 1; 
+    color: var(--color-primario); 
+}
+
+th.sortable.desc::after { 
+    content: '\f0dd'; 
+    opacity: 1; 
+    color: var(--color-primario); 
+}
+
+/* ======================================= */
+/* BUSCADOR EXPANDIBLE (PANEL ADMIN)       */
+/* ======================================= */
+.admin-search-wrapper { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.admin-search-container { 
+    position: relative; 
+    background-color: var(--bg-nav); 
+    border: 2px solid var(--color-primario); 
+    border-radius: 40px; 
+    height: 42px; 
+    width: 42px; 
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.admin-search-container.active { 
+    width: 250px; 
+    box-shadow: 0 0 12px rgba(0, 116, 224, 0.4); 
+}
+
+.admin-search-input { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    background: transparent; 
+    color: var(--texto-principal); 
+    outline: none; 
+    font-size: 15px; 
+    padding-left: 15px; 
+    padding-right: 40px; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.4s ease; 
+    border-radius: 40px; 
+}
+
+.admin-search-container.active .admin-search-input { 
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.admin-search-icon { 
+    position: absolute; 
+    top: 10px; 
+    right: 0; 
+    width: 38px; 
+    height: 38px; 
+    line-height: 38px; 
+    text-align: center; 
+    color: var(--texto-principal); 
+    cursor: pointer; 
+    z-index: 2; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.admin-search-container.active .admin-search-icon, 
+.admin-search-icon:hover { 
+    color: var(--color-primario); 
+    transform: scale(1.1); 
+}
+
+/* ======================================= */
+/* ESTILOS PARA INPUTS DEL MODAL (SWEETALERT) */
+/* ======================================= */
+.swal2-popup .swal2-input { 
+    background-color: var(--bg-body) !important; 
+    color: var(--texto-principal) !important; 
+    border: 1px solid var(--borde-color) !important; 
+    border-radius: 6px !important; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important; 
+}
+
+.swal2-popup .swal2-input::placeholder { 
+    color: var(--texto-secundario) !important; 
+    opacity: 0.9 !important; 
+}
+
+.swal2-popup .swal2-input:focus { 
+    border-color: var(--color-primario) !important; 
+    box-shadow: 0 0 5px rgba(0, 116, 224, 0.5) !important; 
+    outline: none !important; 
+}

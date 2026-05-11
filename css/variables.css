@@ -1,0 +1,42 @@
+/* ======================================= */
+/* VARIABLES Y TEMAS                       */
+/* ======================================= */
+:root {
+    --bg-principal: #020e22;       
+    --bg-nav: #11151a;             
+    --color-primario: #0074e0;     
+    --color-hover: #005fba;        
+    --texto-principal: #ffffff;    
+    --texto-secundario: #a1a7b5;   
+    --bg-tarjetas: transparent;    
+    --borde-color: rgba(255, 255, 255, 0.1); 
+    --sombra: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --filtro-logo: grayscale(100%) brightness(200%); 
+    --bg-badge: rgba(10, 15, 11, 0.85); 
+    --bg-sidebar: #11151a;
+    --texto-sidebar: #ffffff;
+    --bg-sidebar-header: #020e22;
+    --bg-sidebar-item: rgba(255, 255, 255, 0.05);
+    --filtro-carrusel: drop-shadow(0 10px 25px rgba(0, 116, 224, 0.35));
+    --borde-avatar: var(--texto-secundario);
+}
+
+body.modo-claro {
+    --bg-principal: #f4f6f8;       
+    --bg-nav: #e2e8f0;             
+    --color-primario: #0074e0;     
+    --color-hover: #005fba;
+    --texto-principal: #11151a;    
+    --texto-secundario: #5c677d;   
+    --bg-tarjetas: transparent;    
+    --borde-color: rgba(0, 0, 0, 0.1); 
+    --sombra: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --filtro-logo: grayscale(100%) brightness(0%); 
+    --bg-badge: rgba(255, 255, 255, 0.9); 
+    --bg-sidebar: #ffffff;
+    --texto-sidebar: #11151a;
+    --bg-sidebar-header: #e2e8f0;  
+    --bg-sidebar-item: rgba(0, 0, 0, 0.03);
+    --filtro-carrusel: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+    --borde-avatar: rgba(0, 0, 0, 0.3);
+}
