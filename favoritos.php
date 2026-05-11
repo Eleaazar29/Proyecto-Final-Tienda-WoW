@@ -35,7 +35,7 @@ foreach ($productos_bd_raw as $prod) {
 
 <div class="contenido-pagina">
     <div class="header-seccion" style="margin-bottom: 10px;">
-        // Muestro el título traducido y el botón para ordenar la lista de la A a la Z.
+        <?php// Muestro el título traducido y el botón para ordenar la lista de la A a la Z. ?>
         <h2 class="titulo-seccion"><?php echo t('nav.favoritos') ?? 'Tus Favoritos'; ?></h2>
         
         <button class="btn-ordenar" data-target="lista-favoritos" data-orden="asc" onclick="ordenarProductos(this)">
@@ -46,7 +46,7 @@ foreach ($productos_bd_raw as $prod) {
         </button>
     </div>
 
-    // Aquí es donde mi código JavaScript pintará las tarjetas de los productos que el usuario haya guardado.
+    <?php // Aquí es donde mi código JavaScript pintará las tarjetas de los productos que el usuario haya guardado. ?>
     <div id="lista-favoritos" class="product-grid" style="min-height: 50vh;">
         <p style="grid-column: 1/-1; text-align:center; font-size: 1.2em; padding: 40px; color: var(--texto-secundario);">
             <?php echo t('favoritos.cargando') ?? 'Loading your favorite games...'; ?>
